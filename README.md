@@ -17,14 +17,16 @@ CREATE TABLE tickets (
 ```
 
 Update the connection string in `main.go` with your PostgreSQL password, then:
-
+```
 go run main.go
-
+```
 The server starts on port 8080.
 
 ## Endpoints
 **Create a ticket**
+```
 POST /tickets
+```
 Body:
 ```json
 {
@@ -34,10 +36,14 @@ Body:
 ```
 
 **Get all tickets**
+```
 GET /tickets
+```
 
 **Get one ticket**
+```
 GET /tickets/1
+```
 
 ## Design Decisions
 - PostgreSQL replaces in-memory storage — data persists across server restarts
